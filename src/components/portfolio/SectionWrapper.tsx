@@ -18,18 +18,18 @@ const SectionWrapper = ({ id, label, heading, intro, children }: SectionWrapperP
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.5 }}
       >
-        {/* Eyebrow label */}
-        <p
-          className="uppercase tracking-[0.12em] mb-2"
-          style={{ fontSize: "0.75rem", color: "#00D4AA" }}
-        >
-          {label}
-        </p>
-        {/* Heading — uses heading prop if provided, otherwise label is the heading */}
         {heading ? (
-          <h2 className="font-heading text-2xl md:text-3xl mb-2" style={{ color: "#F0F4FF" }}>
-            {heading}
-          </h2>
+          <>
+            <p
+              className="uppercase tracking-[0.12em] mb-2"
+              style={{ fontSize: "0.75rem", color: "#00D4AA" }}
+            >
+              {label}
+            </p>
+            <h2 className="font-heading text-2xl md:text-3xl mb-2" style={{ color: "#F0F4FF" }}>
+              {heading}
+            </h2>
+          </>
         ) : (
           <h2 className="font-heading text-2xl md:text-3xl mb-2" style={{ color: "#F0F4FF" }}>
             {label}
