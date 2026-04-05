@@ -6,6 +6,7 @@ interface SkillCategory {
   title: string;
   color: string;
   skills: string[];
+  note?: string;
 }
 
 const categories: SkillCategory[] = [
